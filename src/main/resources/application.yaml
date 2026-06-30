@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: veiktest
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/wallet
+    username: wallet_user
+    password: wallet_pass
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+
+logging:
+  file:
+    name: logs/penny-service.log
+
+  level:
+    root: WARN
+    com.wallet.pennyservice: INFO
+
+server:
+  port: 8080
+  error:
+    include-message: always
